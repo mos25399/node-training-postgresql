@@ -1,8 +1,8 @@
-const { EntitySchema } = require('typeorm')
+const { EntitySchema } = require("typeorm");
 
 module.exports = new EntitySchema({
-  name: "CreditPackage",
-  tableName: "CREDIT_PACKAGE",
+  name: "Skill",
+  tableName: "SKILL",
   columns: {
     id: {
       primary: true,
@@ -16,17 +16,7 @@ module.exports = new EntitySchema({
       nullable: false,
       unique: true,
     },
-    credit_amount: {
-      type: "integer",
-      nullable: false,
-    },
-    price: {
-      type: "numeric",
-      precision: "10",
-      scale: "2",
-      nullable: false,
-    },
-    created_at: {
+    credit_at: {
       type: "timestamp",
       nullable: false,
       createDate: true,
